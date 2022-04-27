@@ -50,36 +50,36 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="navbar-brand fw-bolder fs-4 mx-auto" href="/">
+          <Link className="navbar-brand fw-bolder fs-4 mx-auto" to="/">
             Food Trucks Nearby
-          </a>
+          </Link>
           {!isLoggedIn ? (
             <div>
-              <a
-                href="/login"
+              <Link
+                to="/login"
                 className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 role="button"
               >
                 Login
-              </a>
-              <a
-                href="/register"
+              </Link>
+              <Link
+                to="/register"
                 className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 role="button"
               >
                 Register
-              </a>
+              </Link>
             </div>
           ) : (
             <div>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 role="button"
                 onClick={authService.logout}
               >
                 Logout
-              </a>
+              </Link>
             </div>
           )}
         </div>
