@@ -44,15 +44,15 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <Link className="nav-link" href="/about">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="navbar-brand fw-bolder fs-4 mx-auto" href="/">
+          <Link className="navbar-brand fw-bolder fs-4 mx-auto" to="/">
             Food Trucks Nearby
-          </a>
+          </Link>
           {!isLoggedIn ? (
             <div>
               <a
