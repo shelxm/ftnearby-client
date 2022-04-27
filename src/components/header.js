@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { NavDropdown } from "bootstrap";
 import authService from "./redux/authService";
 
 const Header = () => {
@@ -38,47 +39,47 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/foodtrucks">
+                <a className="nav-link" href="/foodtrucks">
                   Food Trucks
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/about">
+                <a className="nav-link" href="/about">
                   About
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
-          <Link className="navbar-brand fw-bolder fs-4 mx-auto" to="/">
+          <a className="navbar-brand fw-bolder fs-4 mx-auto" href="/">
             Food Trucks Nearby
-          </Link>
+          </a>
           {!isLoggedIn ? (
             <div>
-              <Link
-                to="/login"
+              <a
+                href="/login"
                 className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 role="button"
               >
                 Login
-              </Link>
-              <Link
-                to="/register"
+              </a>
+              <a
+                href="/register"
                 className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 role="button"
               >
                 Register
-              </Link>
+              </a>
             </div>
           ) : (
             <div>
-              <Link
-                to="/"
+              <a
+                href="/"
                 className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 role="button"
                 onClick={authService.logout}
               >
                 Logout
-              </Link>
+              </a>
             </div>
           )}
         </div>
