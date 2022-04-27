@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { NavDropdown } from "bootstrap";
 import authService from "./redux/authService";
 
 const Header = () => {
@@ -38,14 +39,14 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/foodtrucks">
+                <Link className="nav-link" to="/foodtrucks">
                   Food Trucks
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
