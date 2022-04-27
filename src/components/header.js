@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavDropdown } from "bootstrap";
 import authService from "./redux/authService";
 
 const Header = () => {
