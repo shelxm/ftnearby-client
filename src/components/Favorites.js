@@ -24,7 +24,7 @@ const Favorites = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <GenTruckList foodTrucks={favoritedTrucks} />
     </div>
   );
