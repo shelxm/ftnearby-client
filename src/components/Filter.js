@@ -5,7 +5,7 @@ const Filter = (props) => {
     props.onFilterChange(event.target.value);
   }
   return (
-    <div classNmae="container">
+    <div className="container">
       <label>
         <strong>Filter:</strong>
         <select onChange={(e) => handleChange(e)}>
