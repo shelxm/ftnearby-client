@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import GenTruckList from "./GenTruckList";
+import API from './redux/api';
 
 const Favorites = () => {
   const [favoritedTrucks, setFavoritedTrucks] = useState([]);
@@ -10,7 +11,7 @@ const Favorites = () => {
     const user = JSON.parse(window.localStorage.getItem("user"));
     const token = user.token;
     axios
-      .get("https://ftnearby.herokuapp.com/user/favorites", {
+      .get(API + "user/favorites/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
