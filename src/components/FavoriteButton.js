@@ -3,7 +3,7 @@ import ToggleFavorite from './ToggleFavorite';
 
 const FavoriteButton = (props) => {
     const [isFavorite, setIsFavorite] = useState();
-    isFavorited.state=false;
+    //isFavorited.state=false;
 
     //user favorites array
     //if truckId in user.favorites
