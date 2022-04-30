@@ -1,5 +1,6 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css";
 import Header from "./components/header.js";
 import Home from "./components/pages/Home.js";
 import FoodTrucks from "./components/FoodTrucks.js";
