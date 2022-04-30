@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ToggleFavorite from './ToggleFavorite';
 
 const FavoriteButton = (props) => {
     const [isFavorite, setIsFavorite] = useState();
+    isFavorite.state=false;
 
     //user favorites array
     //if truckId in user.favorites

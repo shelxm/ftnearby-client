@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ToggleFavorite = (props) => {
+/*export const ToggleFavorite = (props) => {
     const [isFavorite, setIsFavorite] = useState();
 
     function handleOnClick(event) {
@@ -8,4 +8,4 @@ export const ToggleFavorite = (props) => {
             
         }
     };
-};
+};*/
