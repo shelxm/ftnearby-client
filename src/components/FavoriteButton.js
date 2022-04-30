@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import ToggleFavorite from './ToggleFavorite';
+import axios from 'axios';
 import API from './redux/api';
 
 const FavoriteButton = (props) => {
-    const [isFavorite, setIsFavorite] = useState();
+    /*const [isFavorite, setIsFavorite] = useState();
 
     useEffect(() => {
         const user = JSON.parse(window.localStorage.getItem("user"));
@@ -15,16 +15,16 @@ const FavoriteButton = (props) => {
             },
           })
           .then((res) => {
-            setFavoritedTrucks(res.data);
+            setIsFavorite(res.data);
           })
           .catch((err) => {
-            console.log("Error from GenTruckList.");
+            console.log("Error from favorites.");
           });
     }, []);
 
     function handleOnClick(event) {
 
-    }
+    }*/
     //user favorites array
     //if truckId in user.favorites
     //isFav
