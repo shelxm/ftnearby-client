@@ -13,7 +13,7 @@ const TruckCard = ({ foodtruck }) => {
         <a href={foodtruck.link} className="btn btn-primary">
           For more information
         </a>
-        <span>{FavoriteButton}</span>
+        <FavoriteButton/>
       </div>
     </div>
   );
