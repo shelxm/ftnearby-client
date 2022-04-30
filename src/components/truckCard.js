@@ -1,4 +1,5 @@
 import React from "react";
+import FavoriteButton from './FavoriteButton';
 
 const TruckCard = ({ foodtruck }) => {
   //console.log(foodtruck);
@@ -12,6 +13,7 @@ const TruckCard = ({ foodtruck }) => {
         <a href={foodtruck.link} className="btn btn-primary">
           For more information
         </a>
+        <>{FavoriteButton}</>
       </div>
     </div>
   );
