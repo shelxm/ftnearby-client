@@ -4,9 +4,7 @@ import FavoriteButton from './FavoriteButton';
 const TruckCard = ({ foodtruck, onUpdated }) => {
   return (
     <div className="card container">
-      <div className="embed-responsive embed-responsive-16by9">
-        <img src={foodtruck.imgUrl} className="card-img-top embed-responsive-item" alt="..." />
-      </div>
+      <img src={foodtruck.imgUrl} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{foodtruck.name}</h5>
         <p className="card-text">{foodtruck.hours}</p>
