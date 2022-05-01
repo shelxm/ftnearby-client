@@ -4,7 +4,7 @@ import FavoriteButton from './FavoriteButton';
 const TruckCard = ({ foodtruck, onUpdated }) => {
   //console.log(foodtruck);
   return (
-    <div className="card container" style="width: 18rem">
+    <div className="card container">
       <img src={foodtruck.imgUrl} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{foodtruck.name}</h5>
