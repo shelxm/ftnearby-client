@@ -2,7 +2,6 @@ import React from "react";
 import FavoriteButton from './FavoriteButton';
 
 const TruckCard = ({ foodtruck, onUpdated }) => {
-  //console.log(foodtruck);
   return (
     <div className="card container">
       <div className="embed-responsive embed-responsive-16by9">

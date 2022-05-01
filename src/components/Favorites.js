@@ -26,7 +26,6 @@ const Favorites = () => {
       });
   }
   useEffect(async () => {
-    // window.localStorage.setItem('user', JSON.stringify(response.data))
     await loadFavorites();
   }, []);
 

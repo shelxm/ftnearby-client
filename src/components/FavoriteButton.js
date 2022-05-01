@@ -8,9 +8,7 @@ const FavoriteButton = ({foodTruck, onUpdated}) => {
         const user = JSON.parse(window.localStorage.getItem("user"));
         setToken(user.token);
     }, []);
-    /*headers: {
-        Authorization: `Bearer ${token}`,
-    },*/
+
     async function handleOnFavorite() {
         console.log('I am the favorite function')
         await axios.post(API + "user/favorites/", { truckId: foodTruck._id}, {headers: {
@@ -27,19 +25,7 @@ const FavoriteButton = ({foodTruck, onUpdated}) => {
         }});
         console.log('Removing favorite worked');
         await onUpdated();
-        //axios.post(API + "user/favorites/", { id: event.target.truckId})
 }
-    //user favorites array
-    //if truckId in user.favorites
-    //isFav
-
-    
-   /* function onToggle(e) {
-        if (isFavorite) {
-
-        }
-    }*/
-    
 
     return (foodTruck.isFavorite ? (
                 <button className="btn" onClick={handleRemoveFavorite}>
