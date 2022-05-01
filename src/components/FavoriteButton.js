@@ -5,7 +5,7 @@ import API from './redux/api';
 const FavoriteButton = () => {
     const [isFavorite, setIsFavorite] = useState([]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const user = JSON.parse(window.localStorage.getItem("user"));
         const token = user.token;
         axios
