@@ -3,9 +3,9 @@ import axios from 'axios';
 import API from './redux/api';
 
 const FavoriteButton = () => {
-    const [isFavorite, setIsFavorite] = useState();
+    /*const [isFavorite, setIsFavorite] = useState();
 
-    /*useEffect(() => {
+    useEffect(() => {
         const user = JSON.parse(window.localStorage.getItem("user"));
         const token = user.token;
         axios
@@ -21,12 +21,12 @@ const FavoriteButton = () => {
             console.log("Error from favorites.");
           });
     }, []);*/
-
+    let isFavorite=false;
     function handleOnClick(event) {
-        if (isFavorite) {
-            setIsFavorite=false
+        if (isFavorite===true) {
+            isFavorite=false
         }
-        setIsFavorite=true
+        isFavorite=true
     }
     //user favorites array
     //if truckId in user.favorites
