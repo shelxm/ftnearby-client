@@ -5,7 +5,7 @@ const TruckCard = ({ foodtruck }) => {
   //console.log(foodtruck);
   return (
     <div className="card container">
-      <img src={"foodtruck.imgUrl"} className="card-img-top" alt="..." />
+      <img src="{foodtruck.imgUrl}" className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{foodtruck.name}</h5>
         <p className="card-text">{foodtruck.hours}</p>
