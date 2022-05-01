@@ -23,7 +23,7 @@ function GenTruckList({foodTrucks, onUpdated}) {
         <div className="row">
           <div className="col-md-12">
             <br />
-            <h2 className="display-4 text-center">Food Truck</h2>
+            <h3 className="display-4 text-center">Food Trucks</h3>
           </div>
           <div className="row">{foodTruckList}</div>
         </div>

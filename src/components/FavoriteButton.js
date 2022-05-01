@@ -7,7 +7,7 @@ const FavoriteButton = ({foodTruck, onUpdated}) => {
     useEffect(() =>{
         const user = JSON.parse(window.localStorage.getItem("user"));
         setToken(user.token);
-    });
+    }, []);
     /*headers: {
         Authorization: `Bearer ${token}`,
     },*/
