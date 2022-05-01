@@ -3,6 +3,7 @@ import axios from "axios";
 import GenTruckList from "./GenTruckList";
 import Filter from "./Filter";
 import SearchBar from "./SearchBar";
+import API from './redux/api';
 
 const FoodTrucks = () => {
   const [foodTrucks, setFoodTrucks] = useState();
@@ -11,7 +12,7 @@ const FoodTrucks = () => {
 
   useEffect(() => {
     axios
-      .get("https://ftnearby.herokuapp.com/foodtrucks")
+      .get(API + "foodtrucks")
       .then((res) => {
         setFoodTrucks(res.data);
         setFilteredTrucks(res.data);

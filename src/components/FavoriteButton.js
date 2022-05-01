@@ -24,9 +24,9 @@ const FavoriteButton = () => {
 
     function handleOnClick(event) {
         if (isFavorite) {
-            isFavorite=false
+            setIsFavorite=false
         }
-        setIsFavorite(event.target)
+        setIsFavorite=true
     }
     //user favorites array
     //if truckId in user.favorites
