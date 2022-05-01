@@ -5,7 +5,9 @@ const TruckCard = ({ foodtruck, onUpdated }) => {
   //console.log(foodtruck);
   return (
     <div className="card container">
-      <img src={foodtruck.imgUrl} className="card-img-top" alt="..." />
+      <div className="embed-responsive embed-responsive-16by9">
+        <img src={foodtruck.imgUrl} className="card-img-top embed-responsive-item" alt="..." />
+      </div>
       <div className="card-body">
         <h5 className="card-title">{foodtruck.name}</h5>
         <p className="card-text">{foodtruck.hours}</p>
