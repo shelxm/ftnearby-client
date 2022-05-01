@@ -10,18 +10,32 @@ const FoodTrucks = () => {
   const [filteredTrucks, setFilteredTrucks] = useState();
   const [searchedTrucks, setSearchedTrucks] = useState();
 
-  useEffect(() => {
-    axios
-      .get(API + "foodtrucks")
-      .then((res) => {
-        setFoodTrucks(res.data);
-        setFilteredTrucks(res.data);
-        setSearchedTrucks(res.data);
-      })
-      .catch((err) => {
-        console.log("Error from GenTruckList.");
+
+  async function loadFoodTrucks() {
+    const res = await axios.get(API + "foodtrucks");
+    
+    const user = JSON.parse(window.localStorage.getItem("user"));
+    const token = user.token;
+    const favorites = await axios.get(API + "user/favorites/", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
-  }, []);
+
+    res.data.forEach((truck) => {
+      truck.isFavorite= favorites.data.some(favorite => favorite._id === truck._id)
+        
+    });
+    
+    setFoodTrucks(res.data);
+    setFilteredTrucks(res.data);
+    setSearchedTrucks(res.data);
+  }
+
+  useEffect(async () => {
+    await loadFoodTrucks();
+  },[]);
+      
 
   function onFilterChange(filter) {
     let result = foodTrucks;
@@ -48,12 +62,17 @@ const FoodTrucks = () => {
     setSearchedTrucks(result);
   }
 
+  async function onUpdated() {
+    console.log('This worked')
+    await loadFoodTrucks();
+  }
+
   return (
     <div className="container">
       <p>Welcome to the food truck page</p>
       <Filter onFilterChange={onFilterChange} />
       <SearchBar onSearch={onSearch} />
-      <GenTruckList foodTrucks={searchedTrucks} />
+      <GenTruckList foodTrucks={searchedTrucks} onUpdated={onUpdated} />
     </div>
   );
 };
